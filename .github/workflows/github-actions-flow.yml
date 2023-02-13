@@ -1,0 +1,22 @@
+name: My first demo workflow
+on: 
+  push:
+    branches: 
+      - main
+    branches-ignore: 
+      - .github
+  pull_request:
+    branches: 
+      - main 
+  schedule:
+    - cron: '* * *'
+    
+jobs:
+  build:
+    name: 'Build the code'
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 'Ouput name of event'
+      uses: echo ${{github.event_name}}
+    
