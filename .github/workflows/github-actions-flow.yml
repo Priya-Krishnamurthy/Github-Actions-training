@@ -33,4 +33,8 @@ jobs:
     - name: Dump runner context
       run: |
         echo "${{ toJSON(runner) }}"
+    - run: |
+        echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ."
+        echo "🎉 The job was triggered by event: ${{ github.event_name }}"
+    
     
