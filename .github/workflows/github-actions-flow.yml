@@ -17,6 +17,12 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: 'Ouput name of event'
-      uses: echo ${{github.event}}
+    - name: Dump runner context
+      uses: echo ${{toJSON(runner)}}
+    - name: Dump env context
+      uses: echo ${{toJSON(env)}}
+    - name: Dump matrix context
+      uses: echo ${{toJSON(matrix)}}
+    - name: Dump github context
+      uses: echo ${{toJSON(github)}}
     
