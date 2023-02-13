@@ -18,16 +18,13 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Dump runner context
-      run: | 
-        echo ${{ toJSON(runner) }}
+    - name: Dump github context
+      run: |
+        echo ${{ toJSON(github) }}
     - name: Dump env context
       run: |
         echo ${{ toJSON(env) }}
     - name: Dump matrix context
       run: |
         echo ${{ toJSON(matrix) }}
-    - name: Dump github context
-      run: |
-        echo ${{ toJSON(github) }}
     
