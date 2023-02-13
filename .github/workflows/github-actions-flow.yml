@@ -18,5 +18,5 @@ jobs:
     
     steps:
     - name: 'Ouput name of event'
-      uses: echo ${{github.event_name}}
+      uses: echo ${{github.event}}
     
