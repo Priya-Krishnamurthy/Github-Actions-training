@@ -36,5 +36,11 @@ jobs:
     - run: |
         echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ."
         echo "🎉 The job was triggered by event: ${{ github.event_name }}"
-    
+    - uses: action/checkout@latest
+    - name: 'List files in directory'
+      run: |
+        echo "List all files in repo ${{ github.repository }}"
+        tree
+        
+ 
     
