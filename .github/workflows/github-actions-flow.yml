@@ -19,11 +19,15 @@ jobs:
     
     steps:
     - name: Dump runner context
-      run: echo ${{toJSON(runner)}}
+      run: | 
+        echo ${{toJSON(runner)}}
     - name: Dump env context
-      run: echo ${{toJSON(env)}}
+      run: |
+        echo ${{toJSON(env)}}
     - name: Dump matrix context
-      run: echo ${{toJSON(matrix)}}
+      run: |
+        echo ${{toJSON(matrix)}}
     - name: Dump github context
-      run: echo ${{toJSON(github)}}
+      run: |
+        echo ${{toJSON(github)}}
     
